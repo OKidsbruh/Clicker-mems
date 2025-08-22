@@ -1,0 +1,118 @@
+button {
+	cursor: pointer;
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+ 	height: 50px;
+ 	padding: 0 20px;
+ 	font-size: 18px;
+ 	text-transform: uppercase;
+ 	border: 0;
+ 	box-shadow: hsl(124.62deg 87% 36%) 0px 7px 0px 0px;
+ 	background-color: hsl(124.62deg 81.25% 47.27%);
+ 	border-radius: 12px;
+ 	overflow: hidden;
+ 	transition: 31ms cubic-bezier(.5, .7, .4, 1);
+
+}
+
+button:before {
+ 	content: attr(alt);
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+ 	position: absolute;
+ 	inset: 0;
+ 	font-size: 15px;
+ 	font-weight: bold;
+ 	color: white;
+ 	letter-spacing: 4px;
+ 	opacity: 1;
+}
+
+button:active {
+ box-shadow: none;
+ transform: translateY(7px);
+ transition: 35ms cubic-bezier(.5, .7, .4, 1);
+}
+
+
+#clickerImage {
+  display: block;
+  margin: 20px auto;
+  width: 300px;
+  height: auto;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+#clickerImage.pulse {
+  animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+#floaters-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.coin-floater {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  animation: floatUp 1s ease-out forwards;
+  z-index: 1000;
+  transition: transform 0.3s;
+}
+
+.coin-floater.critical {
+  transform: scale(1.5);
+  filter: drop-shadow(0 0 10px red);
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+
+
+#game-area {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 300px;
+  height: 300px;
+  border: 2px solid #222;
+  background: #fff8;
+  display: none;
+  overflow: hidden;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+.shape {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: gold;
+  cursor: pointer;
+  box-shadow: 0 0 5px orange;
+}

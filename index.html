@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<style type="text/css">
+		body {
+			position: relative;
+			font-family: 'Press Start 2P', cursive;
+			margin: 0;
+			width: 100%;
+			height: 100vh;
+			text-align: center;
+			background-image: url(https://abrakadabra.fun/uploads/posts/2022-02/1644513650_5-abrakadabra-fun-p-fon-dlya-klikera-7.png);
+			background-size: 100% 100%;
+		}
+		html, body {
+  			margin: 0;
+  			padding: 0;
+  			overflow: hidden;
+  			height: 100%;
+
+		#main-title {
+  			font-size: 36px;
+  			margin-top: 20px;
+  			color: #ffcc00;
+  			text-shadow: 2px 2px 5px #000;
+}
+
+
+   		#stats {
+  			position: absolute;
+  			top: 10px;
+  			left: 10px;
+  			text-align: left;
+  			background: rgba(0, 0, 0, 0.7); /* напівпрозорий чорний */
+  			color: #00ff00; /* яскраво-зелений */
+  			padding: 15px 20px;
+  			border: 2px solid #00ff00;
+  			border-radius: 12px;
+  			font-family: 'Arial Black', sans-serif;
+  			box-shadow: 0 0 10px #00ff00;
+  			z-index: 1000;
+  		}
+
+		#clickers {
+  			position: absolute;
+  			left: 50%;
+  			top: 50%;
+  			transform: translate(-50%, -50%);
+  			text-align: center;
+			}
+
+
+		#click1{
+			position: absolute;
+			left: 85%;
+			top:10%;
+		}
+		#click10{
+			position: absolute;
+			left: 85%;
+			top:20%;
+		}
+		#click100{
+			position: absolute;
+			left: 85%;
+			top:30%;
+		}
+		#click1000{
+			position: absolute;
+			left: 85%;
+			top:40%;
+		}
+		#click10000{
+			position: absolute;
+			left: 85%;
+			top:50%;
+		}
+		#start-mini{
+			position: absolute; 
+			left: 89%; 
+			top: 60%;
+		}
+
+		#roulette {
+  			position: absolute;
+  			left: 88%;
+  			top: 70%;
+  			width: 200px;
+		}
+
+		#roulette-bet {
+  			width: 100%;
+  			padding: 5px;
+  			font-size: 16px;
+  			display: block;
+  			margin-bottom: 10px;
+		}
+
+		#roulette-play {
+  			width: 100%;
+  			margin-top: 0;
+  			display: block;
+  			position: relative;
+  			top: 0;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<script type= "text/javascript" 
+src="urok.js"></script>
+	<div id="floaters-container"></div>
+	<div id="clickers">
+  		<img id="clickerImage" src="images/1mem.png" alt="Clicker" onclick="clicker(event)">
+  		<h1 id="main-title">Клікер мемів</h1>
+	</div>
+
+	<div id="stats">
+		<h1 id="Clicks">Mem coins: 0</h1>
+		<h2 id="Clickforclick">Mem coins за клік: 1</h2>
+		<h3 id="player-title">Титул: 🐣 Початківець</h3>
+	</div>
+
+	<button id="start-mini" >🎮 Міні-гра</button>
+	<div id="game-area"></div>
+
+	<button id="click1" onclick="click1()">+1 клік (коштує 50 mem coins)</button>
+	<button id="click10" onclick="click2()">+10 клік (коштує 500 mem coins)</button>
+	<button id="click100" onclick="click3()">+100 клік (коштує 5000 mem coins)</button>
+	<button id="click1000" onclick="click4()">+1000 клік (коштує 50000 mem coins)</button>
+	<button id="click10000" onclick="click5()">+10000 клік (коштує 500000 mem coins)</button>
+
+	<div id="roulette">
+  		<input id="roulette-bet" type="number" min="1" placeholder="Введи ставку">
+  		<button id="roulette-play">🎰 Грати в рулетку</button>
+	</div>
+
+	<script>
+
+	</script>
+
+</body>
+</html>
